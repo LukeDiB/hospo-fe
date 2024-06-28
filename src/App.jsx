@@ -12,7 +12,10 @@ function App() {
           path="/"
           element={<Home />}
         />
-        <Route path="/:day"   element={<DayPage />}/>
+        <Route
+          path="/:day"
+          element={<DayPage />}
+        />
       </Routes>
     </>
   );

@@ -4,17 +4,17 @@ const DayPage = () => {
   const { day } = useParams();
 
   return (
-    <div
-      id="dayPage"
-      style={{ "background-color": "#3D6B3B", 'margin': 0, 'padding': '1000px' }}
-    >
-      <h1 className="venue">RAMONA</h1>
-      <h1 className="venue">BUNDOBUST</h1>
-      <h1 className="venue">THREE LITTLE WORDS</h1>
-      <h1 className="venue">SHACK</h1>
-      <h1 className="venue">POINT BLANK SHOOTING</h1>
-      <h1 className="venue">NELL'S</h1>
-      <h2>{day.toUpperCase()}</h2>
+    <div id={day}>
+      <div id="venue-box">
+        <button className="venue">RAMONA</button>
+        <button className="venue">BUNDOBUST</button>
+        <button className="venue">THREE LITTLE WORDS</button>
+        <button className="venue">SHACK</button>
+        <button className="venue">POINT BLANK SHOOTING</button>
+        <button className="venue">NELL'S</button>
+      </div>
+        <h2 id="day">{day.toUpperCase()}</h2>
+        <h2 id="hospo-bottom">HOSPO</h2>
     </div>
   );
 };

@@ -13,8 +13,11 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
   min-width: 320px;
   min-height: 100vh;
   font-family: "Figtree", sans-serif;
