@@ -13,8 +13,8 @@ const DayPage = () => {
         <button className="venue">POINT BLANK SHOOTING</button>
         <button className="venue">NELL'S</button>
       </div>
-        <h2 id="day">{day.toUpperCase()}</h2>
-        <h2 id="hospo-bottom">HOSPO</h2>
+      <h2 id="day">{day.toUpperCase()}</h2>
+      <button id="hospo-bottom" link='/'>HOSPO</button>
     </div>
   );
 };
