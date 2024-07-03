@@ -1,11 +1,3 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  text-align: center;
-  
-} */
 
 #homeimage {
   width: 100%;
@@ -160,11 +152,16 @@
   padding-right: 30px;
 }
 
+#hospo-div {
+  display: flex;
+  justify-content: center;
+}
+
 #hospo-bottom {
   font-size: 2rem;
   font-weight: 500;
-  padding-top: 150px;
-  letter-spacing: 0.4em;
+  margin-top: 150px;
+  letter-spacing: 0.5em;
   background: none;
   border: none;
   cursor: pointer;

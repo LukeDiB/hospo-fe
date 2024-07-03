@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom";
 
 const DayPage = () => {
   const { day } = useParams();
+  // const venue = 
+  const handleClick = () => {
+    window.location.href = `/`
+    // fix venue navigation
+  }
 
   return (
     <div id={day}>
@@ -14,7 +19,14 @@ const DayPage = () => {
         <button className="venue">NELL'S</button>
       </div>
       <h2 id="day">{day.toUpperCase()}</h2>
-      <button id="hospo-bottom" link='/'>HOSPO</button>
+      <div id="hospo-div">
+        <button
+          id="hospo-bottom"
+          onClick={() => handleClick()}
+        >
+          HOSPO
+        </button>
+      </div>
     </div>
   );
 };
