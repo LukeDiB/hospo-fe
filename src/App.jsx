@@ -18,7 +18,7 @@ function App() {
           element={<DayPage />}
         />
         <Route
-          path="/:venue"
+          path="/:day/:venue"
           element={<VenuePage />}
         />
       </Routes>
