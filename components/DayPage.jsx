@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const DayPage = () => {
   const { day } = useParams();
   const [venue, setVenue] = useState("");
+  const navigate = useNavigate();
   const handleClick = () => {
     window.location.href = `/`;
   };
 
   const handleClickVenue = (event) => {
-    setVenue(event.target.id);
-    (window.location.href = `/${day}/${venue}`);
-    // figure out how to bring 'ramona' into url
+    const venueId = event.target.id;
+    setVenue(venueId);
+    navigate(`/${day}/${venueId}`);
   };
 
   return (
@@ -21,36 +22,47 @@ const DayPage = () => {
           className="venue"
           onClick={handleClickVenue}
           id="ramona"
+          key="ramona"
         >
           RAMONA
         </button>
         <button
           className="venue"
           onClick={handleClickVenue}
+          id="bundobust"
+          key="bundobust"
         >
           BUNDOBUST
         </button>
         <button
           className="venue"
           onClick={handleClickVenue}
+          id="threelittlewords"
+          key="threelittlewords"
         >
           THREE LITTLE WORDS
         </button>
         <button
           className="venue"
           onClick={handleClickVenue}
+          id='shack'
+          key='shack'
         >
           SHACK
         </button>
         <button
           className="venue"
           onClick={handleClickVenue}
+          id='pointblankshooting'
+          key='pointblankshooting'
         >
           POINT BLANK SHOOTING
         </button>
         <button
           className="venue"
           onClick={handleClickVenue}
+          id='nells'
+          key='nells'
         >
           NELL'S
         </button>
