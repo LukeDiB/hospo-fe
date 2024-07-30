@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import HospoButton from "./HospoButton";
 
 const DayPage = () => {
   const { day } = useParams();
   const [venue, setVenue] = useState("");
   const navigate = useNavigate();
-  const handleClick = () => {
-    window.location.href = `/`;
-  };
+  
 
   const handleClickVenue = (event) => {
     const venueId = event.target.id;
@@ -68,14 +67,7 @@ const DayPage = () => {
         </button>
       </div>
       <h2 id="day">{day.toUpperCase()}</h2>
-      <div id="hospo-div">
-        <button
-          id="hospo-bottom"
-          onClick={() => handleClick()}
-        >
-          HOSPO
-        </button>
-      </div>
+      {HospoButton()}
     </div>
   );
 };

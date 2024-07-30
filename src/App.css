@@ -170,3 +170,21 @@
 #hospo-bottom:focus {
   text-decoration: underline;
 }
+
+#venue-page-title-div{
+  border: 1px, solid, black;
+  /* margin-bottom: 100px; */
+}
+
+#venue-page-title{
+  border: 1px, solid, black;
+  /* margin-bottom: 100px; */
+}
+
+#venue-page-div {
+  display: grid;
+  height: 80vh;
+  width: 100vw;
+  border: 1px, solid, black;
+  
+}

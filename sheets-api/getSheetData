@@ -1,0 +1,31 @@
+const { google } = require('googleapis');
+const sheets = google.sheets('v4');
+
+async function getSheetData() {
+    const auth = new google.auth.GoogleAuth({
+        keyFile: 'path/to/your-service-account-file.json', // Replace with the path to your service account file
+        scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
+    });
+
+    const client = await auth.getClient();
+    const spreadsheetId = 'your-spreadsheet-id'; // Replace with your Spreadsheet ID
+    const range = 'Sheet1!A1:D10'; // Replace with your desired range
+
+    const response = await sheets.spreadsheets.values.get({
+        auth: client,
+        spreadsheetId: spreadsheetId,
+        range: range,
+    });
+
+    const rows = response.data.values;
+    if (rows.length) {
+        console.log('Name, Major:');
+        rows.map((row) => {
+            console.log(`${row[0]}, ${row[1]}`);
+        });
+    } else {
+        console.log('No data found.');
+    }
+}
+
+getSheetData();
